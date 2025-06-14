@@ -1,0 +1,72 @@
+.dragActive {
+  border-color: #6366f1;
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.progressBar {
+  transition: width 0.3s ease;
+}
+
+.fileIcon {
+  transition: all 0.2s ease;
+}
+
+.fileItem:hover .fileIcon {
+  transform: scale(1.05);
+}
+
+.thumbnailActive {
+  border-color: #3b82f6;
+  opacity: 1;
+}
+
+.zoomOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.zoomOverlay.active {
+  opacity: 1;
+}
+
+.zoomImage {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.zoomOverlay.active .zoomImage {
+  transform: scale(1);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: #292929;
+  border: 1px solid #3a3a3a;
+  color: #e5e7eb;
+  border-radius: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  opacity: 0.95;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #353535;
+  border-color: #424242;
+  color: #fff;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background: #424242;
+  border-color: #6366f1;
+  color: #fff;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

@@ -1,0 +1,14 @@
+.editorContent {
+  min-height: calc(100vh - 120px);
+}
+
+.sectionCollapsed {
+  max-height: 48px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.sectionExpanded {
+  max-height: 1000px;
+  transition: max-height 0.5s ease;
+}
