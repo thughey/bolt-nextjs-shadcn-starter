@@ -9,18 +9,47 @@ interface ToolbarButtonProps {
   icon: React.ReactNode;
   isActive?: boolean;
   onClick?: () => void;
+  className?: string;
 }
 
-function ToolbarButton({ icon, isActive, onClick }: ToolbarButtonProps) {
+function ToolbarButton({
+  icon,
+  isActive,
+  onClick,
+  className = "",
+}: ToolbarButtonProps) {
   return (
-    <button
-      className={`text-gray-300 hover:text-white p-2 rounded-full ${
-        isActive ? "bg-[#333]" : "hover:bg-[#333]"
-      }`}
-      onClick={onClick}
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          stiffness: 300,
+          damping: 20,
+        },
+      }}
+      whileTap={{
+        scale: 0.95,
+        transition: {
+          type: "spring",
+          stiffness: 400,
+          damping: 17,
+        },
+      }}
+      initial={{ opacity: 0.8 }}
+      animate={{ opacity: 0.8 }}
+      transition={{ duration: 0.2 }}
     >
-      {icon}
-    </button>
+      <button
+        className={`text-gray-300 hover:text-white p-2 rounded-full ${
+          isActive ? "bg-[#222]" : "hover:bg-[#333]"
+        } ${className}`}
+        onClick={onClick}
+      >
+        {icon}
+      </button>
+    </motion.div>
   );
 }
 
@@ -66,6 +95,7 @@ function EditorToolbar({
             }
             onClick={onBack}
             isActive={true}
+            className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] hover:border-[#555] transition-colors"
           />
           {/* Text Formatting Controls */}
           <div className="flex space-x-1 border-r border-[#2a2a2a] pr-4">
@@ -131,7 +161,7 @@ function EditorToolbar({
           {/* Text Style Controls */}
           <div className="flex space-x-4 border-r border-[#2a2a2a] pr-4">
             <select
-              className="bg-[#222] text-gray-300 rounded-md pl-2.5 pr-8 py-1 text-sm border border-[#2a2a2a] focus:outline-none focus:ring-1 focus:ring-[#444] appearance-none bg-no-repeat bg-[length:16px_16px] bg-[center_right_0.5rem] bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20stroke%3D%22%239CA3AF%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')]"
+              className="bg-transparent text-gray-300 rounded-md pl-2.5 pr-8 py-1 text-sm border border-[#333] hover:border-[#555] focus:outline-none focus:ring-1 focus:ring-[#444] appearance-none bg-no-repeat bg-[length:16px_16px] bg-[center_right_0.5rem] bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20stroke%3D%22%239CA3AF%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')]"
               onChange={(e) =>
                 onFormatChange?.(`font-weight-${e.target.value}`)
               }
@@ -363,10 +393,10 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
 
           {/* Document Content */}
           <div
-            className="flex-grow mb-[-100px] pb-[100px] p-16 overflow-auto"
+            className="flex-grow mb-[-100px] pb-[100px] p-16 px-12 overflow-auto"
             ref={editorRef}
           >
-            <div className="max-w-3xl mx-auto editor-content">
+            <div className="min-w-[400px] max-w-[400px] mx-auto editor-content">
               <div
                 contentEditable
                 className="outline-none"
@@ -398,54 +428,123 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                 <span>5 collaborators</span>
               </div>
               <div className="flex items-center space-x-3">
-                <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                    />
-                  </svg>
-                </button>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
               </div>
             </motion.div>
           </div>

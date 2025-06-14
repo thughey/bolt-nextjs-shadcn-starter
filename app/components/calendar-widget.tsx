@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 export function CalendarWidget() {
   return (
@@ -8,38 +9,84 @@ export function CalendarWidget() {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-white text-lg font-medium">June 2023</h2>
         <div className="flex space-x-2">
-          <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </motion.div>
         </div>
       </div>
 
@@ -59,121 +106,924 @@ export function CalendarWidget() {
         {/* Calendar days */}
         <div className="grid grid-cols-7 gap-2">
           {/* Previous month days (greyed out) */}
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm">
-            28
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm">
-            29
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm">
-            30
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm">
-            31
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              28
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              29
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              30
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              31
+            </div>
+          </motion.div>
 
           {/* Current month days */}
-          <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative group">
-            <span className="text-gray-300 text-sm">1</span>
-            <div className="w-1.5 h-1.5 bg-red-500 rounded-full absolute bottom-3" />
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            2
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            3
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative group border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              <span className="text-gray-300 text-sm">1</span>
+              <div className="w-1.5 h-1.5 bg-red-500 rounded-full absolute bottom-3" />
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              2
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              3
+            </div>
+          </motion.div>
 
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            4
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            5
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            6
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            7
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            8
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            9
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            10
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              4
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              5
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              6
+            </div>
+          </motion.div>
 
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            11
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            12
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            13
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative">
-            <span className="text-gray-300 text-sm">14</span>
-            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full absolute bottom-3" />
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            15
-          </div>
-          <div className="aspect-square rounded-full bg-[#282828] flex items-center justify-center text-white text-sm font-medium border-2 border-[#434343]">
-            16
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            17
-          </div>
-
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            18
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            19
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            20
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            21
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative">
-            <span className="text-gray-300 text-sm">22</span>
-            <div className="w-1.5 h-1.5 bg-green-500 rounded-full absolute bottom-3" />
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            23
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            24
-          </div>
-
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            25
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            26
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            27
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            28
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm">
-            29
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative">
-            <span className="text-gray-300 text-sm">30</span>
-            <div className="w-1.5 h-1.5 bg-purple-500 rounded-full absolute bottom-3" />
-          </div>
-          <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm">
-            1
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              7
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              8
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              9
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              10
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              11
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              12
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              13
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              <span className="text-gray-300 text-sm">14</span>
+              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full absolute bottom-3" />
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              15
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#282828] flex items-center justify-center text-white text-sm font-medium border-2 border-[#434343] cursor-pointer">
+              16
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              17
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              18
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              19
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              20
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              21
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              <span className="text-gray-300 text-sm">22</span>
+              <div className="w-1.5 h-1.5 bg-green-500 rounded-full absolute bottom-3" />
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              23
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              24
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              25
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              26
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              27
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              28
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-300 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              29
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex flex-col items-center justify-center relative border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              <span className="text-gray-300 text-sm">30</span>
+              <div className="w-1.5 h-1.5 bg-purple-500 rounded-full absolute bottom-3" />
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              opacity: 1,
+              transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              },
+            }}
+            whileTap={{
+              scale: 0.95,
+              transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              },
+            }}
+            initial={{ opacity: 0.8 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="aspect-square rounded-full bg-[#222] flex items-center justify-center text-gray-500 text-sm border border-[#2a2a2a] hover:border-[#333] cursor-pointer">
+              1
+            </div>
+          </motion.div>
         </div>
       </div>
 
@@ -182,27 +1032,50 @@ export function CalendarWidget() {
         <h3 className="text-gray-400 text-sm font-medium">
           Today&apos;s Schedule (June 16)
         </h3>
-        <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 py-1 px-3 rounded-full text-xs flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-3 w-3 mr-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M12 4v16m8-8H4"
-            />
-          </svg>
-          <span>Add Event</span>
-        </button>
+        <motion.div
+          whileHover={{
+            scale: 1.05,
+            opacity: 1,
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+            },
+          }}
+          whileTap={{
+            scale: 0.95,
+            transition: {
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            },
+          }}
+          initial={{ opacity: 0.8 }}
+          animate={{ opacity: 0.8 }}
+          transition={{ duration: 0.2 }}
+        >
+          <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 py-1 px-3 rounded-full text-xs flex items-center border border-[#2a2a2a] hover:border-[#333]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-3 w-3 mr-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 4v16m8-8H4"
+              />
+            </svg>
+            <span>Add Event</span>
+          </button>
+        </motion.div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <div className="bg-[#222] rounded-xl p-3">
+        <div className="bg-[#222] rounded-xl p-3 border border-[#2a2a2a] hover:border-[#333]">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <span className="text-gray-300 text-sm">Team Standup</span>
@@ -214,7 +1087,7 @@ export function CalendarWidget() {
           </div>
         </div>
 
-        <div className="bg-[#222] rounded-xl p-3">
+        <div className="bg-[#222] rounded-xl p-3 border border-[#2a2a2a] hover:border-[#333]">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <span className="text-gray-300 text-sm">Client Meeting</span>

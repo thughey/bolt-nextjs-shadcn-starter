@@ -15,21 +15,6 @@ export default function NavigationRound() {
     description: string;
   } | null>(null);
 
-  const handleIconHover = (element: HTMLElement) => {
-    element.style.transform = "scale(1.05)";
-  };
-
-  const handleIconLeave = (element: HTMLElement) => {
-    element.style.transform = "scale(1)";
-  };
-
-  const handleIconClick = (element: HTMLElement) => {
-    element.style.transform = "scale(0.95)";
-    setTimeout(() => {
-      element.style.transform = "scale(1)";
-    }, 100);
-  };
-
   const handleDocSelect = (doc: { title: string; description: string }) => {
     setSelectedDoc(doc);
   };
@@ -41,18 +26,35 @@ export default function NavigationRound() {
           {/* Primary Navigation (Top) */}
           <div className="w-full flex flex-col items-center">
             {/* Calendar Icon */}
-            <div
+            <motion.div
               className="w-full flex justify-center pb-0.5 cursor-pointer"
               onClick={() => setActiveWidget("calendar")}
-              onMouseEnter={(e) => handleIconHover(e.currentTarget)}
-              onMouseLeave={(e) => handleIconLeave(e.currentTarget)}
-              onMouseDown={(e) => handleIconClick(e.currentTarget)}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
               <div
                 className={`${
                   activeWidget === "calendar"
-                    ? "bg-[#2b2b2b]"
-                    : "hover:bg-[#2a2a2a]"
+                    ? "bg-[#2b2b2b] border border-[#3a3a3a]"
+                    : "hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent"
                 } w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200`}
               >
                 <svg
@@ -74,21 +76,38 @@ export default function NavigationRound() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
             {/* Document Icon */}
-            <div
+            <motion.div
               className="w-full flex justify-center py-0.5 cursor-pointer"
               onClick={() => setActiveWidget("document")}
-              onMouseEnter={(e) => handleIconHover(e.currentTarget)}
-              onMouseLeave={(e) => handleIconLeave(e.currentTarget)}
-              onMouseDown={(e) => handleIconClick(e.currentTarget)}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
               <div
                 className={`${
                   activeWidget === "document"
-                    ? "bg-[#2b2b2b]"
-                    : "hover:bg-[#2a2a2a]"
+                    ? "bg-[#2b2b2b] border border-[#3a3a3a]"
+                    : "hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent"
                 } w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200`}
               >
                 <svg
@@ -110,16 +129,33 @@ export default function NavigationRound() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
             {/* User Profile Icon */}
-            <div
+            <motion.div
               className="w-full flex justify-center py-0.5 cursor-pointer"
-              onMouseEnter={(e) => handleIconHover(e.currentTarget)}
-              onMouseLeave={(e) => handleIconLeave(e.currentTarget)}
-              onMouseDown={(e) => handleIconClick(e.currentTarget)}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-300 hover:text-white"
@@ -135,7 +171,7 @@ export default function NavigationRound() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Secondary Actions (Bottom) */}
@@ -144,13 +180,30 @@ export default function NavigationRound() {
             <div className="w-8 border-t border-[#2a2a2a] my-3" />
 
             {/* Light Bulb Icon */}
-            <div
+            <motion.div
               className="w-full flex justify-center py-0.5 cursor-pointer"
-              onMouseEnter={(e) => handleIconHover(e.currentTarget)}
-              onMouseLeave={(e) => handleIconLeave(e.currentTarget)}
-              onMouseDown={(e) => handleIconClick(e.currentTarget)}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-300 hover:text-white"
@@ -171,16 +224,33 @@ export default function NavigationRound() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
             {/* Search Icon */}
-            <div
+            <motion.div
               className="w-full flex justify-center pt-0.5 cursor-pointer"
-              onMouseEnter={(e) => handleIconHover(e.currentTarget)}
-              onMouseLeave={(e) => handleIconLeave(e.currentTarget)}
-              onMouseDown={(e) => handleIconClick(e.currentTarget)}
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-gray-300 hover:text-white"
@@ -196,7 +266,7 @@ export default function NavigationRound() {
                   />
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 

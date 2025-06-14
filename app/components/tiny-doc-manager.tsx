@@ -19,54 +19,123 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
             <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <h2 className="text-white text-lg font-medium">Documents</h2>
               <div className="flex items-center space-x-2">
-                <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                    />
-                  </svg>
-                </button>
-                <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </button>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    transition: {
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 17,
+                    },
+                  }}
+                  initial={{ opacity: 0.8 }}
+                  animate={{ opacity: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                      />
+                    </svg>
+                  </button>
+                </motion.div>
               </div>
             </div>
 
@@ -76,51 +145,75 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                 {
                   title: "Timeline & Milestones",
                   description:
-                    "Project planning document with key deliverables",
+                    "Comprehensive project planning document outlining key deliverables, deadlines, and critical path analysis for the upcoming quarter",
                   timeAgo: "2h ago",
                   category: "Planning",
                   icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
                 },
                 {
                   title: "Q4 Analytics Report",
-                  description: "Performance metrics and insights",
+                  description:
+                    "Detailed performance metrics and insights covering user engagement, conversion rates, and revenue growth across all platforms",
                   timeAgo: "yesterday",
                   category: "Analytics",
                   icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
                 },
                 {
                   title: "Product Roadmap",
-                  description: "Feature planning and release schedule",
+                  description:
+                    "Strategic feature planning and release schedule with detailed technical specifications and resource allocation for each milestone",
                   timeAgo: "3d ago",
                   category: "Product",
                   icon: "M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2",
                 },
                 {
                   title: "Meeting Notes",
-                  description: "Weekly team sync discussion points",
+                  description:
+                    "Comprehensive summary of weekly team sync including action items, key decisions, and follow-up tasks for all departments",
                   timeAgo: "5d ago",
                   category: "Team",
                   icon: "M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z",
                 },
                 {
                   title: "UI Design System",
-                  description: "Component library and guidelines",
+                  description:
+                    "Complete component library and design guidelines including accessibility standards, responsive patterns, and interaction states",
                   timeAgo: "1w ago",
                   category: "Design",
                   icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z",
                 },
                 {
                   title: "Budget Proposal",
-                  description: "Financial planning for next quarter",
+                  description:
+                    "Detailed financial planning document for next quarter including revenue projections, expense allocations, and investment strategies",
                   timeAgo: "2w ago",
                   category: "Finance",
                   icon: "M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z",
                 },
               ].map((doc, index) => (
-                <div
+                <motion.div
                   key={index}
                   onClick={() => onDocSelect(doc)}
-                  className="document-card bg-[#222] rounded-xl overflow-hidden border border-[#2a2a2a] hover:border-[#333] cursor-pointer transition-all duration-200 hover:bg-[#2a2a2a]"
+                  className="document-card bg-[#222] rounded-xl overflow-hidden border border-[#2a2a2a] cursor-pointer"
+                  whileHover={{
+                    y: -3,
+                    backgroundColor: "#252525",
+                    borderColor: "#3a3a3a",
+                    transition: {
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 25,
+                      mass: 0.8,
+                      velocity: 0.5,
+                    },
+                  }}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.04,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                 >
                   <div className="p-4 border-b border-[#2a2a2a]">
                     <div className="flex justify-between items-start">
@@ -160,19 +253,19 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                     <h3 className="text-gray-300 text-sm font-medium mb-1">
                       {doc.title}
                     </h3>
-                    <p className="text-gray-400 text-xs mb-4">
+                    <p className="text-gray-400 text-xs mb-4 line-clamp-2">
                       {doc.description}
                     </p>
                     <div className="flex justify-between items-center mt-4">
                       <span className="text-gray-400 text-xs">
                         Edited {doc.timeAgo}
                       </span>
-                      <span className="bg-[#2a2a2a] text-xs text-gray-400 px-2 py-1 rounded-md">
+                      <span className="bg-[#2a2a2a] text-xs text-gray-400 px-2 py-1 rounded-md border border-[#333]">
                         {doc.category}
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -197,38 +290,84 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
             <span>Last updated: Today, 2:45 PM</span>
           </div>
           <div className="flex items-center space-x-3">
-            <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
-            </button>
-            <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                />
-              </svg>
-            </button>
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                  />
+                </svg>
+              </button>
+            </motion.div>
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                opacity: 1,
+                transition: {
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                },
+              }}
+              initial={{ opacity: 0.8 }}
+              animate={{ opacity: 0.8 }}
+              transition={{ duration: 0.2 }}
+            >
+              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              </button>
+            </motion.div>
           </div>
         </motion.div>
       </div>
