@@ -420,7 +420,7 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                 mass: 0.5,
                 delay: 0.25,
               }}
-              className="bg-[#222] border-t border-[#2a2a2a] p-3 flex justify-between items-center"
+              className="bg-[#222] border-t border-[#2a2a2a] px-4 py-3 flex justify-between items-center"
             >
               <div className="flex items-center text-gray-400 text-xs">
                 <span>Last edited: Today, 2:45 PM</span>
