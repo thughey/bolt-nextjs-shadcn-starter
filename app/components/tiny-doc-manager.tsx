@@ -9,15 +9,15 @@ interface TinyDocManagerProps {
 
 const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
   return (
-    <div className="w-full h-full bg-[#1a1a1a] flex flex-col overflow-hidden">
+    <div className="w-full h-full bg-white flex flex-col overflow-hidden">
       {/* Main Content Area with Document Library */}
-      <div className="flex-1 bg-[#1a1a1a] rounded-2xl m-0 mx-0 flex flex-col min-h-0">
+      <div className="flex-1 bg-white rounded-2xl m-0 mx-0 flex flex-col min-h-0">
         {/* Scrollable Content Area */}
         <div className="flex-1 overflow-y-auto mb-[-100px] pb-[100px] min-h-0">
           {/* Search and Actions Bar */}
           <div className="p-5">
             <div className="mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <h2 className="text-white text-lg font-medium">Documents</h2>
+              <h2 className="text-gray-900 text-lg font-medium">Documents</h2>
               <div className="flex items-center space-x-2">
                 <motion.div
                   whileHover={{
@@ -41,7 +41,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full flex items-center border border-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -80,7 +80,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full flex items-center border border-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -119,7 +119,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#222] hover:bg-[#2a2a2a] text-gray-300 p-2 rounded-full flex items-center border border-[#2a2a2a] hover:border-[#333]">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full flex items-center border border-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -194,11 +194,10 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                 <motion.div
                   key={index}
                   onClick={() => onDocSelect(doc)}
-                  className="document-card bg-[#222] rounded-xl overflow-hidden border border-[#2a2a2a] cursor-pointer"
+                  className="document-card bg-white rounded-xl overflow-hidden border border-gray-200 cursor-pointer"
                   whileHover={{
                     y: -3,
-                    backgroundColor: "#252525",
-                    borderColor: "#3a3a3a",
+                    backgroundColor: "#fff",
                     transition: {
                       type: "spring",
                       stiffness: 200,
@@ -223,7 +222,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                     ease: [0.16, 1, 0.3, 1],
                   }}
                 >
-                  <div className="p-4 border-b border-[#2a2a2a]">
+                  <div className="p-4 border-b border-gray-200">
                     <div className="flex justify-between items-start">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +238,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                           d={doc.icon}
                         />
                       </svg>
-                      <button className="text-gray-400 hover:text-white">
+                      <button className="text-gray-400">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-4 w-4"
@@ -258,17 +257,17 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="text-gray-300 text-sm font-medium mb-1">
+                    <h3 className="text-gray-900 text-sm font-medium mb-1">
                       {doc.title}
                     </h3>
-                    <p className="text-gray-400 text-xs mb-4 line-clamp-2">
+                    <p className="text-gray-700 text-xs mb-4 line-clamp-2">
                       {doc.description}
                     </p>
                     <div className="flex justify-between items-center mt-4">
-                      <span className="text-gray-400 text-xs">
+                      <span className="text-gray-500 text-xs">
                         Edited {doc.timeAgo}
                       </span>
-                      <span className="bg-[#2a2a2a] text-xs text-gray-400 px-2 py-1 rounded-md border border-[#333]">
+                      <span className="bg-gray-50 text-xs text-gray-700 px-2 py-1 rounded-md border border-gray-200">
                         {doc.category}
                       </span>
                     </div>
@@ -290,9 +289,9 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
             mass: 0.5,
             delay: 0.2,
           }}
-          className="bg-[#222] border-t border-[#2a2a2a] p-3 flex justify-between items-center sticky bottom-0"
+          className="bg-gray-50 border-t border-gray-200 p-3 flex justify-between items-center sticky bottom-0"
         >
-          <div className="flex items-center text-gray-400 text-xs">
+          <div className="flex items-center text-gray-500 text-xs">
             <span>6 documents</span>
             <span className="mx-2">•</span>
             <span>Last updated: Today, 2:45 PM</span>
@@ -320,7 +319,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full flex items-center border border-[#333] hover:border-[#555] transition-colors">
+              <button className="bg-gray-50 text-gray-700 p-2 rounded-full border border-gray-200 transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -359,7 +358,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full flex items-center border border-[#333] hover:border-[#555] transition-colors">
+              <button className="bg-gray-50 text-gray-700 p-2 rounded-full border border-gray-200 transition-colors">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"

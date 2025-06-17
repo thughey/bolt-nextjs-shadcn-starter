@@ -42,8 +42,8 @@ function ToolbarButton({
       transition={{ duration: 0.2 }}
     >
       <button
-        className={`text-gray-300 hover:text-white p-2 rounded-full ${
-          isActive ? "bg-[#222]" : "hover:bg-[#333]"
+        className={`text-gray-700 hover:text-gray-900 p-2 rounded-full ${
+          isActive ? "bg-gray-50" : ""
         } ${className}`}
         onClick={onClick}
       >
@@ -71,7 +71,7 @@ function EditorToolbar({
         mass: 0.5,
         delay: 0.25,
       }}
-      className="w-full bg-[#222] border-b border-[#2a2a2a] px-4 py-2"
+      className="w-full bg-white border-b border-gray-200 px-4 py-2"
     >
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center space-x-4">
@@ -95,10 +95,10 @@ function EditorToolbar({
             }
             onClick={onBack}
             isActive={true}
-            className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] hover:border-[#555] transition-colors"
+            className="bg-gray-50 border border-gray-200 transition-colors"
           />
           {/* Text Formatting Controls */}
-          <div className="flex space-x-1 border-r border-[#2a2a2a] pr-4">
+          <div className="flex space-x-1 border-r border-gray-200 pr-4">
             <ToolbarButton
               icon={
                 <svg
@@ -159,9 +159,9 @@ function EditorToolbar({
           </div>
 
           {/* Text Style Controls */}
-          <div className="flex space-x-4 border-r border-[#2a2a2a] pr-4">
+          <div className="flex space-x-4 border-r border-gray-200 pr-4">
             <select
-              className="bg-transparent text-gray-300 rounded-md pl-2.5 pr-8 py-1 text-sm border border-[#333] hover:border-[#555] focus:outline-none focus:ring-1 focus:ring-[#444] appearance-none bg-no-repeat bg-[length:16px_16px] bg-[center_right_0.5rem] bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20stroke%3D%22%239CA3AF%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')]"
+              className="bg-transparent text-gray-700 rounded-md pl-2.5 pr-8 py-1 text-sm border border-gray-200 hover:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-300 appearance-none bg-no-repeat bg-[length:16px_16px] bg-[center_right_0.5rem] bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20stroke%3D%22%239CA3AF%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')]"
               onChange={(e) =>
                 onFormatChange?.(`font-weight-${e.target.value}`)
               }
@@ -242,9 +242,9 @@ function EditorToolbar({
 export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [content, setContent] = useState<string>(`
-    <h2 class="text-white text-2xl font-semibold mb-6">Project Overview</h2>
+    <h2 class="text-gray-900 text-2xl font-semibold mb-6">Project Overview</h2>
 
-    <p class="text-gray-300 mb-6">
+    <p class="text-gray-700 mb-6">
       This document provides a comprehensive overview of our project
       timeline, key milestones, and associated deliverables for the
       upcoming quarter. It serves as the central reference for all
@@ -253,16 +253,16 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
       activities.
     </p>
 
-    <h3 class="text-white text-xl font-medium mb-4">Key Objectives</h3>
-    <ul class="text-gray-300 mb-6 list-disc pl-6 space-y-2">
+    <h3 class="text-gray-900 text-xl font-medium mb-4">Key Objectives</h3>
+    <ul class="text-gray-700 mb-6 list-disc pl-6 space-y-2">
       <li>Launch the new product features by Q3 2024</li>
       <li>Improve user engagement metrics by 25%</li>
       <li>Reduce system response time to under 200ms</li>
       <li>Implement automated testing coverage of 85%</li>
     </ul>
 
-    <h3 class="text-white text-xl font-medium mb-4">Project Timeline</h3>
-    <ol class="text-gray-300 mb-6 list-decimal pl-6 space-y-2">
+    <h3 class="text-gray-900 text-xl font-medium mb-4">Project Timeline</h3>
+    <ol class="text-gray-700 mb-6 list-decimal pl-6 space-y-2">
       <li>Phase 1: Planning and Requirements (Week 1-2)
         <ul class="list-disc pl-6 mt-2 space-y-1">
           <li>Gather stakeholder requirements</li>
@@ -286,36 +286,36 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
       </li>
     </ol>
 
-    <h3 class="text-white text-xl font-medium mb-4">Resource Allocation</h3>
-    <p class="text-gray-300 mb-4">
+    <h3 class="text-gray-900 text-xl font-medium mb-4">Resource Allocation</h3>
+    <p class="text-gray-700 mb-4">
       The project will require a cross-functional team with expertise in various domains.
       We'll need to ensure proper resource allocation across different phases of the project.
     </p>
 
-    <div class="bg-[#2a2a2a] p-4 rounded-lg mb-6">
-      <h4 class="text-white font-medium mb-2">Important Note</h4>
-      <p class="text-gray-300">
+    <div class="bg-gray-100 p-4 rounded-lg mb-6">
+      <h4 class="text-gray-900 font-medium mb-2">Important Note</h4>
+      <p class="text-gray-700">
         All team members should update their progress in the project management tool daily.
         Weekly sync meetings will be held every Monday at 10:00 AM EST.
       </p>
     </div>
 
-    <h3 class="text-white text-xl font-medium mb-4">Risk Assessment</h3>
-    <table class="w-full text-gray-300 mb-6">
+    <h3 class="text-gray-900 text-xl font-medium mb-4">Risk Assessment</h3>
+    <table class="w-full text-gray-700 mb-6">
       <thead>
-        <tr class="border-b border-[#2a2a2a]">
+        <tr class="border-b border-gray-200">
           <th class="text-left py-2">Risk</th>
           <th class="text-left py-2">Impact</th>
           <th class="text-left py-2">Mitigation</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b border-[#2a2a2a]">
+        <tr class="border-b border-gray-200">
           <td class="py-2">Resource constraints</td>
           <td class="py-2">High</td>
           <td class="py-2">Early resource planning and allocation</td>
         </tr>
-        <tr class="border-b border-[#2a2a2a]">
+        <tr class="border-b border-gray-200">
           <td class="py-2">Technical debt</td>
           <td class="py-2">Medium</td>
           <td class="py-2">Regular code reviews and refactoring</td>
@@ -381,9 +381,9 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
   return (
     <div className="w-full h-full flex">
       {/* Main Content Area with Collapsible Sidebar */}
-      <div className="h-full flex-grow bg-[#1a1a1a] ml-0 overflow-hidden flex">
+      <div className="h-full flex-grow bg-white ml-0 overflow-hidden flex">
         {/* Document Editor Area */}
-        <div className="flex-grow flex flex-col h-full bg-[#1a1a1a] relative">
+        <div className="flex-grow flex flex-col h-full bg-white relative">
           <div className="sticky top-0 z-10">
             <EditorToolbar
               onFormatChange={handleFormatChange}
@@ -420,9 +420,9 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                 mass: 0.5,
                 delay: 0.25,
               }}
-              className="bg-[#222] border-t border-[#2a2a2a] p-3 flex justify-between items-center"
+              className="bg-gray-50 border-t border-gray-200 p-3 flex justify-between items-center"
             >
-              <div className="flex items-center text-gray-400 text-xs">
+              <div className="flex items-center text-gray-500 text-xs">
                 <span>Last edited: Today, 2:45 PM</span>
                 <span className="mx-2">•</span>
                 <span>5 collaborators</span>
@@ -450,7 +450,7 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full border border-gray-200 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -489,7 +489,7 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full border border-gray-200 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"
@@ -528,7 +528,7 @@ export function TinyDocEditor({ onBack }: { onBack?: () => void }) {
                   animate={{ opacity: 0.8 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#333] hover:border-[#555] transition-colors">
+                  <button className="bg-gray-50 text-gray-700 p-2 rounded-full border border-gray-200 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-4 w-4"

@@ -19,7 +19,7 @@ function CalendarTasker() {
             aria-label="Calendar view switcher"
           >
             <button
-              className="flex items-center justify-center border border-gray-300 rounded-l-xl px-4 py-2 text-gray-600 hover:bg-gray-50 focus:z-10"
+              className="flex items-center justify-center border border-gray-300 rounded-l-xl px-4 py-2 text-gray-600 focus:z-10"
               aria-pressed="false"
               type="button"
             >
@@ -53,7 +53,7 @@ function CalendarTasker() {
               Week
             </button>
             <button
-              className="flex items-center justify-center border border-gray-300 border-l-0 rounded-r-xl px-4 py-2 text-gray-600 hover:bg-gray-50 focus:z-10"
+              className="flex items-center justify-center border border-gray-300 border-l-0 rounded-r-xl px-4 py-2 text-gray-600 focus:z-10"
               aria-pressed="false"
               type="button"
             >
@@ -74,7 +74,7 @@ function CalendarTasker() {
           </div>
 
           <div className="flex ml-4">
-            <button className="p-1 rounded-lg hover:bg-gray-100">
+            <button className="p-1 rounded-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 text-gray-500"
@@ -90,7 +90,7 @@ function CalendarTasker() {
                 />
               </svg>
             </button>
-            <button className="p-1 rounded-lg hover:bg-gray-100">
+            <button className="p-1 rounded-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 text-gray-500"
