@@ -207,14 +207,6 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
                       velocity: 0.5,
                     },
                   }}
-                  whileTap={{
-                    scale: 0.95,
-                    transition: {
-                      type: "spring",
-                      stiffness: 400,
-                      damping: 17,
-                    },
-                  }}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -290,11 +282,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
             mass: 0.5,
             delay: 0.2,
           }}
-<<<<<<< HEAD
           className="bg-[#222] border-t border-[#2a2a2a] px-5 py-3 flex justify-between items-center sticky bottom-0"
-=======
-          className="bg-[#222] border-t border-[#2a2a2a] p-3 flex justify-between items-center sticky bottom-0"
->>>>>>> parent of df285b3 (light edits)
         >
           <div className="flex items-center text-gray-400 text-xs">
             <span>6 documents</span>
@@ -324,7 +312,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full flex items-center border border-[#333] hover:border-[#555] transition-colors">
+              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -363,7 +351,7 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full flex items-center border border-[#333] hover:border-[#555] transition-colors">
+              <button className="bg-[#2a2a2a] hover:bg-[#333] text-gray-300 p-2 rounded-full border border-[#2a2a2a] hover:border-[#333]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"

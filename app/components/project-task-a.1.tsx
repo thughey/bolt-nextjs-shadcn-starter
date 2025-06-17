@@ -2,12 +2,12 @@ import React from "react";
 
 export function ProjectTaskA() {
   return (
-    <div className="w-full p- h-full flex flex-col items-center justify-center bg-[#222] min-h-screen">
+    <div className="w-full p- h-full flex flex-col items-center justify-center bg-white min-h-screen">
       {/* Projects header with actions */}
       <div className="w-full max-w-3xl bg-white rounded-2xl px-6 py-4 mb-4">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
-            <button className="text-gray-400 mr-4 border border-gray-300 rounded-xl p-2">
+            <button className="text-gray-500 mr-4 border border-gray-300 rounded-xl p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -21,7 +21,7 @@ export function ProjectTaskA() {
                 <polyline points="15 18 9 12 15 6"></polyline>
               </svg>
             </button>
-            <span className="text-black text-2xl font-normal">Projects</span>
+            <span className="text-gray-900 text-2xl font-normal">Projects</span>
           </div>
           <div className="flex items-center">
             <button className="flex items-center justify-center border border-gray-300 rounded-xl px-4 py-2 text-gray-600 hover:bg-gray-50 mr-3">
@@ -129,7 +129,7 @@ export function ProjectTaskA() {
                 <span className="text-lg font-medium">Personal</span>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -139,7 +139,7 @@ export function ProjectTaskA() {
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
                 </button>
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -173,7 +173,7 @@ export function ProjectTaskA() {
                 <span className="text-lg font-medium">Work</span>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -183,7 +183,7 @@ export function ProjectTaskA() {
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
                 </button>
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -217,7 +217,7 @@ export function ProjectTaskA() {
                 <span className="text-lg font-medium">Health</span>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -227,7 +227,7 @@ export function ProjectTaskA() {
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
                 </button>
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -261,7 +261,7 @@ export function ProjectTaskA() {
                 <span className="text-lg font-medium">Study</span>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -271,7 +271,7 @@ export function ProjectTaskA() {
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
                 </button>
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -305,7 +305,7 @@ export function ProjectTaskA() {
                 <span className="text-lg font-medium">Travel</span>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -315,7 +315,7 @@ export function ProjectTaskA() {
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
                 </button>
-                <button className="text-gray-400 hover:text-gray-600">
+                <button className="text-gray-500 hover:text-gray-700">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
