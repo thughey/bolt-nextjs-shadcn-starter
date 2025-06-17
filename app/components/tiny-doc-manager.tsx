@@ -290,7 +290,11 @@ const TinyDocManager: FC<TinyDocManagerProps> = ({ onDocSelect }) => {
             mass: 0.5,
             delay: 0.2,
           }}
+<<<<<<< HEAD
           className="bg-[#222] border-t border-[#2a2a2a] px-5 py-3 flex justify-between items-center sticky bottom-0"
+=======
+          className="bg-[#222] border-t border-[#2a2a2a] p-3 flex justify-between items-center sticky bottom-0"
+>>>>>>> parent of df285b3 (light edits)
         >
           <div className="flex items-center text-gray-400 text-xs">
             <span>6 documents</span>
