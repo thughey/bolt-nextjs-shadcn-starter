@@ -20,9 +20,9 @@ export default function NavigationRound() {
   };
 
   return (
-    <div className="w-full min-h-screen p-4 sm:p-8 md:p-12 lg:p-16 bg-[#0a0a0a] flex justify-start items-start">
+    <div className="w-full min-h-screen p-4 sm:p-8 md:p-12 lg:p-16 bg-gray-50 flex justify-start items-start">
       <div className="flex flex-row justify-start items-start w-full">
-        <div className="w-14 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full flex flex-col items-center py-2 m-2 h-fit">
+        <div className="w-14 bg-white border border-gray-200 rounded-full flex flex-col items-center py-2 m-2 h-fit">
           {/* Primary Navigation (Top) */}
           <div className="w-full flex flex-col items-center">
             {/* Calendar Icon */}
@@ -53,16 +53,16 @@ export default function NavigationRound() {
               <div
                 className={`${
                   activeWidget === "calendar"
-                    ? "bg-[#2b2b2b] border border-[#3a3a3a]"
-                    : "hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent"
+                    ? "bg-gray-100 border border-gray-200"
+                    : "hover:border-gray-200 border border-transparent"
                 } w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-5 w-5 ${
                     activeWidget === "calendar"
-                      ? "text-white"
-                      : "text-gray-300 hover:text-white"
+                      ? "text-gray-900"
+                      : "text-gray-500 hover:text-gray-900"
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
@@ -106,16 +106,16 @@ export default function NavigationRound() {
               <div
                 className={`${
                   activeWidget === "document"
-                    ? "bg-[#2b2b2b] border border-[#3a3a3a]"
-                    : "hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent"
+                    ? "bg-gray-100 border border-gray-200"
+                    : "hover:border-gray-200 border border-transparent"
                 } w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-5 w-5 ${
                     activeWidget === "document"
-                      ? "text-white"
-                      : "text-gray-300 hover:text-white"
+                      ? "text-gray-900"
+                      : "text-gray-500 hover:text-gray-900"
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
@@ -155,10 +155,10 @@ export default function NavigationRound() {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:border-gray-200 border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-300 hover:text-white"
+                  className="h-5 w-5 text-gray-500 hover:text-gray-900"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -177,7 +177,7 @@ export default function NavigationRound() {
           {/* Secondary Actions (Bottom) */}
           <div className="w-full flex flex-col items-center">
             {/* Divider */}
-            <div className="w-8 border-t border-[#2a2a2a] my-3" />
+            <div className="w-8 border-t border-gray-200 my-3" />
 
             {/* Light Bulb Icon */}
             <motion.div
@@ -203,10 +203,10 @@ export default function NavigationRound() {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:border-gray-200 border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-300 hover:text-white"
+                  className="h-5 w-5 text-gray-500 hover:text-gray-900"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -250,10 +250,10 @@ export default function NavigationRound() {
               animate={{ opacity: 0.8 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="hover:bg-[#2a2a2a] hover:border-[#3a3a3a] border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
+              <div className="hover:border-gray-200 border border-transparent w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-gray-300 hover:text-white"
+                  className="h-5 w-5 text-gray-500 hover:text-gray-900"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -295,9 +295,9 @@ export default function NavigationRound() {
             mass: 0.1,
             duration: 0.3,
           }}
-          className="inline-block overflow-hidden bg-[#1a1a1a] border border-[#2a2a2a] rounded-3xl mt-2 p-6 relative"
+          className="inline-block overflow-hidden bg-gray-50 border border-gray-200 rounded-3xl mt-2 p-6 relative"
         >
-          <div className="w-full h-full border border-[#2a2a2a] rounded-2xl overflow-hidden">
+          <div className="w-full h-full bg-white border border-gray-200 rounded-2xl overflow-hidden">
             <AnimatePresence mode="wait">
               {activeWidget === "calendar" ? (
                 <motion.div
